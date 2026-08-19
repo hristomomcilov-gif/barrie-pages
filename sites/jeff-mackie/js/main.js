@@ -1,8 +1,8 @@
 (function () {
   var nav = document.getElementById("site-nav");
   var toggle = document.getElementById("nav-toggle");
-  var form = document.getElementById("quote-form");
   var status = document.getElementById("form-status");
+  var params = new URLSearchParams(window.location.search);
 
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
@@ -18,12 +18,9 @@
     });
   }
 
-  if (form && status) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      status.hidden = false;
-      status.classList.add("is-visible");
-      status.focus();
-    });
+  if (status && params.get("sent") === "1") {
+    status.hidden = false;
+    status.classList.add("is-visible");
+    status.focus();
   }
 })();

@@ -20,7 +20,6 @@
   --condensed: "Barlow Condensed", "Arial Narrow", sans-serif;
   --body: "Outfit", "Segoe UI", sans-serif;
   --header-h: 4.4rem;
-  --demo-h: 2.1rem;
   --max: 72rem;
 }
 
@@ -32,7 +31,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--demo-h) + var(--header-h) + 0.6rem);
+  scroll-padding-top: calc(var(--header-h) + 0.6rem);
 }
 
 body {
@@ -107,36 +106,10 @@ textarea {
   color: var(--steel-3);
 }
 
-/* Demo ribbon */
-.demo-ribbon {
-  position: sticky;
-  top: 0;
-  z-index: 60;
-  min-height: var(--demo-h);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.35rem 1rem;
-  background: repeating-linear-gradient(
-    -45deg,
-    #c48a0d,
-    #c48a0d 10px,
-    #d9a21a 10px,
-    #d9a21a 20px
-  );
-  color: var(--accent-ink);
-  font-family: var(--condensed);
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 /* Header */
 .site-header {
   position: sticky;
-  top: var(--demo-h);
+  top: 0;
   z-index: 50;
   background: rgba(8, 21, 37, 0.96);
   border-bottom: 1px solid var(--line);
